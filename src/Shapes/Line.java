@@ -1,3 +1,5 @@
+package Shapes;
+
 public class Line implements Shape {
     private int x1;
     private int y1;
@@ -23,5 +25,15 @@ public class Line implements Shape {
     @Override
     public String toString() {
         return String.format("line %d %d %d %d %s", x1, y1, x2, y2, fill);
+    }
+
+    @Override
+    public boolean isWithinRectangle(int x, int y, int width, int height) {
+        return false;
+    }
+
+    @Override
+    public boolean isWithinCircle(int cx, int cy, int r) {
+        return false;
     }
 }
