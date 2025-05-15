@@ -12,6 +12,6 @@ public class TranslateCommand implements Command{
             if (part.startsWith("vertical=")) dy = Integer.parseInt(part.split("=")[1]);
         }
         context.shapes.get(Integer.parseInt(args[1]) - 1).translate(dx, dy);
-        System.out.println("Shapes.Shape translated successfully");
+        System.out.println("Shape translated successfully");
     }
 }

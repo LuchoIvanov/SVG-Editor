@@ -35,4 +35,9 @@ public class Rectangle implements Shape {
     public boolean isWithinCircle(int cx, int cy, int r) {
         return false;
     }
+    @Override
+    public String toSvg() {
+        return String.format("<rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" fill=\"%s\"/>",
+                x, y, width, height, fill);
+    }
 }

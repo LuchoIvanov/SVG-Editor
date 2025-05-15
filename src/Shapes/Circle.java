@@ -33,4 +33,9 @@ public class Circle implements Shape {
     public boolean isWithinCircle(int cx, int cy, int r) {
         return false;
     }
+    @Override
+    public String toSvg() {
+        return String.format("<circle cx=\"%d\" cy=\"%d\" r=\"%d\" fill=\"%s\"/>",
+                cx, cy, r, fill);
+    }
 }
