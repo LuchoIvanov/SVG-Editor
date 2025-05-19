@@ -1,4 +1,4 @@
-package SvgParser;
+package SVGParser;
 
 import Shapes.*;
 

@@ -1,7 +1,7 @@
 package Commands;
 
 import Application.*;
-import SvgParser.SVGParser;
+import SVGParser.SVGParser;
 
 public class SaveCommand implements Command{
     @Override
@@ -10,6 +10,7 @@ public class SaveCommand implements Command{
             System.out.println("No file opened.");
             return;
         }
+
         SVGParser.save(context.filename, context.shapes);
         System.out.println("Successfully saved to " + context.filename);
     }

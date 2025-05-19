@@ -6,8 +6,13 @@ public class CreateCommand implements Command{
 
     @Override
     public void execute(String[] args, FileContext context) {
+        if (args.length < 2) {
+            System.out.println("Usage: create <shape> [parameters]");
+            return;
+        }
         Shape shape = null;
         String type = args[1].toLowerCase();
+
         switch(type){
             case "rectangle":
                 shape = new Rectangle(Integer.parseInt(args[2]), Integer.parseInt(args[3]),
@@ -25,6 +30,7 @@ public class CreateCommand implements Command{
                 System.out.println("Invalid");
                 return;
         }
+
         context.shapes.add(shape);
         System.out.println("Successfully created " + type + " (" + context.shapes.size() + ")");
     }

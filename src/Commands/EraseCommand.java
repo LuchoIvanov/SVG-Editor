@@ -6,7 +6,12 @@ public class EraseCommand implements Command{
 
     @Override
     public void execute(String[] args, FileContext context) {
+        if (args.length < 2) {
+            System.out.println("Usage: erase <index>");
+            return;
+        }
         int index = Integer.parseInt(args[1]);
+
         if (index < 1 || index > context.shapes.size()) {
             System.out.println("No such index");
         } else {
