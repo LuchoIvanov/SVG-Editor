@@ -4,6 +4,11 @@ import java.io.*;
 import SVGParser.SVGParser;
 
 public class OpenCommand implements Command{
+    /**
+     * Checks if the provided file exists and calls the load method from the SVGParser class
+     * @param args - The name of the file which the user wants to open
+     * @param context
+     */
     @Override
     public void execute(String[] args, FileContext context) {
         if (args.length < 2) {

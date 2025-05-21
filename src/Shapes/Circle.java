@@ -30,9 +30,12 @@ public class Circle implements Shape {
     }
 
     @Override
-    public boolean isWithinCircle(int cx, int cy, int r) {
-        return false;
+    public boolean isWithinCircle(int ox, int oy, int or) {
+        int distX = cx - ox, distY = cy - oy;
+        double distance = Math.sqrt(distX * distX + distY * distY);
+        return distance + r <= or;
     }
+
     @Override
     public String toSvg() {
         return String.format("<circle cx=\"%d\" cy=\"%d\" r=\"%d\" fill=\"%s\"/>",

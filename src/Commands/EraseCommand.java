@@ -3,7 +3,11 @@ import Application.*;
 import Shapes.*;
 
 public class EraseCommand implements Command{
-
+    /**
+     * Removes a shape from the shape list
+     * @param args - The index of the shape which should be erased
+     * @param context
+     */
     @Override
     public void execute(String[] args, FileContext context) {
         if (args.length < 2) {

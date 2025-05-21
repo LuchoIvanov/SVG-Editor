@@ -3,6 +3,11 @@ package Application;
 import Commands.*;
 
 public class CommandFactory {
+    /**
+     * Returns a command object
+     * @param name - Name of the object
+     * @return
+     */
     public static Command getCommand(String name) {
         switch (name.toLowerCase()) {
             case "open":

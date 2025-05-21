@@ -3,6 +3,11 @@ package Commands;
 import Application.*;
 
 public class TranslateCommand implements Command{
+    /**
+     * Updates the position of a given shape
+     * @param args - The position offset the user wishes to create
+     * @param context
+     */
     @Override
     public void execute(String[] args, FileContext context) {
         int dx = 0;

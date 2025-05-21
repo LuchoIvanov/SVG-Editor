@@ -28,12 +28,18 @@ public class Rectangle implements Shape {
 
     @Override
     public boolean isWithinRectangle(int rx, int ry, int rw, int rh) {
-        return x >= rx && y >= ry && x + width <= rx + rw && y + height <= ry + rh;
+        return x >= rx && y >= ry && (x + width) <= (rx + rw) && (y + height) <= (ry + rh);
     }
 
     @Override
     public boolean isWithinCircle(int cx, int cy, int r) {
-        return false;
+        double[] points = {x, y, x+width, y, x, y+height, x+width, y+height};
+        for (int i = 0; i < points.length; i += 2) {
+            double dx = points[i] - cx;
+            double dy = points[i+1] - cy;
+            if (dx*dx + dy*dy > r*r) return false;
+        }
+        return true;
     }
     @Override
     public String toSvg() {

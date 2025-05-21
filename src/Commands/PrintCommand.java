@@ -4,6 +4,11 @@ import Application.*;
 import Shapes.*;
 
 public class PrintCommand implements Command{
+    /**
+     * Displays the shapes and their parameters from the shapes list
+     * @param args
+     * @param context
+     */
     @Override
     public void execute(String[] args, FileContext context) {
         if (context.shapes.isEmpty()) {

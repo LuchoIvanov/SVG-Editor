@@ -2,8 +2,13 @@ package Commands;
 import Application.*;
 import Shapes.*;
 
-public class CreateCommand implements Command{
 
+public class CreateCommand implements Command{
+    /**
+     * Creates a shape with parameters and adds it to the shapes list
+     * @param args - Parameters for the shape
+     * @param context
+     */
     @Override
     public void execute(String[] args, FileContext context) {
         if (args.length < 2) {

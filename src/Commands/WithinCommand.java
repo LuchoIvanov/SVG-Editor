@@ -4,6 +4,12 @@ import Application.*;
 import Shapes.Shape;
 
 public class WithinCommand implements Command{
+    /**
+     * The method checks if the shapes in the shape list are within a shape given by the user. It compares
+     * the positions and determines whether the shape from the list is within the given shape or not
+     * @param args - The shape and the position
+     * @param context
+     */
     @Override
     public void execute(String[] args, FileContext context) {
         if (args.length < 2) {
